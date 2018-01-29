@@ -1,0 +1,25 @@
+package org.usfirst.frc.team6317.robot.subsystems;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+public class Shifter extends Subsystem {
+	DoubleSolenoid solenoid = new DoubleSolenoid(1,2);
+	@Override
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		//nothing
+	}
+	
+	public void forwardShift(){ //Shifts forward
+		solenoid.set(DoubleSolenoid.Value.kForward);
+	}
+	
+	public void backwardShift(){//Shifts reverse
+		solenoid.set(DoubleSolenoid.Value.kReverse);
+	}
+	
+	public void stopShift(){ //Turns off airflow
+		solenoid.set(DoubleSolenoid.Value.kOff);
+	}
+	
+}

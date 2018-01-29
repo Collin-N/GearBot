@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team6317.robot.commands;
 
+
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
 //The setup for shooting in auto is 80 inches from the 80 x 20 on top of the shooter to the bottom left corner of 
@@ -14,6 +15,6 @@ public class ShootingAuto extends CommandGroup {
 		this.addSequential(new DriftCompensatingDriveCommand(0.5, -0.25)); //back up
 		this.addSequential(new DriftCompensatingDriveCommand(0.6, 1.0, 0.2)); //turn right
 		this.addSequential(new DriftCompensatingDriveCommand(0.5, 1.0, -1.0)); //turn right around center
-		this.addSequential(new DriftCompensatingDriveCommand(3.5, 0.3)); //drive forward
+		this.addSequential(new DriftCompensatingDriveCommand(3.75, 0.3)); //drive forward
 	}
 }

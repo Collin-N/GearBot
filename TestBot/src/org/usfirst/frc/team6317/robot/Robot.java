@@ -1,9 +1,11 @@
+
 package org.usfirst.frc.team6317.robot;
 
 import org.usfirst.frc.team6317.robot.commands.AutoBallBinAndShoot;
 import org.usfirst.frc.team6317.robot.commands.BaselineAuto;
 import org.usfirst.frc.team6317.robot.commands.GyroTest;
 import org.usfirst.frc.team6317.robot.commands.ShootingAuto;
+import org.usfirst.frc.team6317.robot.commands.ShootingAutoRed;
 import org.usfirst.frc.team6317.robot.sensors.SpatialPhidgetGyroWrapper;
 import org.usfirst.frc.team6317.robot.subsystems.*;
 
@@ -26,9 +28,12 @@ public class Robot extends IterativeRobot {
     
 	//initializes subsystems
 	public static final DriveTrain DriveTrain = new DriveTrain();
+	public static final AirSystem AirSystem = new AirSystem();
 	public static final IntakeSystem IntakeSystem = new IntakeSystem();
 	public static final WinchSystem WinchSystem = new WinchSystem();
+	public static final Shifter Shifter = new Shifter();
 	public static final Shooter Shooter = new Shooter();
+	public static final Distance DistanceU = new Distance();
 	public static final Kicker Kicker = new Kicker();
 	public static OI oi;
 	public static SpatialPhidgetGyroWrapper gyro;
@@ -61,9 +66,11 @@ public class Robot extends IterativeRobot {
 		
 		autoChooser = new SendableChooser();
 		autoChooser.addDefault("Baseline Auto and Gear", new BaselineAuto());
-		autoChooser.addObject("Shooting Auto", new ShootingAuto());
+		autoChooser.addObject("Shooting Auto -Blue", new ShootingAuto());
+		autoChooser.addObject("Shooting Auto -Red", new ShootingAutoRed());
 		autoChooser.addObject("Gyro Test", new GyroTest());
-		autoChooser.addObject("Bin and Shoot", new AutoBallBinAndShoot());
+		autoChooser.addObject("Bin and Shoot - BLUE", new AutoBallBinAndShoot(AllianceColor.BLUE));
+		autoChooser.addObject("Bin and Shoot - RED", new AutoBallBinAndShoot(AllianceColor.RED));
 		SmartDashboard.putData("Auto Mode", autoChooser);
     }
 	

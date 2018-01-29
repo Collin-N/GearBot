@@ -1,0 +1,7 @@
+package org.usfirst.frc.team6317.robot.sensors;
+
+import edu.wpi.first.wpilibj.AnalogInput;
+
+public class DistanceSensor {
+	public AnalogInput aiUltrasonic = new AnalogInput(0);
+}

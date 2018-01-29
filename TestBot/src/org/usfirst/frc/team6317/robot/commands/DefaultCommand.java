@@ -3,8 +3,6 @@ package org.usfirst.frc.team6317.robot.commands;
 import org.usfirst.frc.team6317.robot.OI;
 import org.usfirst.frc.team6317.robot.Robot;
 import org.usfirst.frc.team6317.robot.RobotMap;
-
-import edu.wpi.first.wpilibj.Joystick.AxisType;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 

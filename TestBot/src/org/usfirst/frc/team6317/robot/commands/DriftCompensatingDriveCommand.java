@@ -29,8 +29,8 @@ public class DriftCompensatingDriveCommand extends Command {
 	protected void execute() {
 		RobotMap.leftDrive1.set(leftSpeed);
 		RobotMap.leftDrive2.set(leftSpeed);
-		RobotMap.rightDrive1.set(-rightSpeed * 1.178);
-		RobotMap.rightDrive2.set(-rightSpeed* 1.178 );
+		RobotMap.rightDrive1.set(-rightSpeed * 1.178);//
+		RobotMap.rightDrive2.set(-rightSpeed * 1.178);//
 	}
 
 	@Override

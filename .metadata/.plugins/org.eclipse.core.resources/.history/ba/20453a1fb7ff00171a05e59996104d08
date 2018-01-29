@@ -1,0 +1,38 @@
+package org.usfirst.frc.team6317.robot.subsystems;
+
+import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+public class SensorsSubsystem extends Subsystem {
+	public AnalogInput distanceSensorOne = new AnalogInput(0);
+//	public SerialPort serialPort = new SerialPort(9600, Port.kOnboard, 8, Parity.kNone, StopBits.kOne);
+	
+	@Override
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public double getDistance() {
+		/*double volts = distanceSensorOne.getVoltage();
+		double millivolts = volts * 1000;
+		double centimeters = millivolts / 4.9;
+		
+		return centimeters;*/
+		double volts = distanceSensorOne.getVoltage();
+		double voltsPerCenti = volts / 1024;
+		double distance = voltsPerCenti / 4.9;
+		
+		return distance;
+//		char c = 0;
+//		while (c != 'R') c = serialPort.readString(1).charAt(0);
+//		StringBuilder sb = new StringBuilder();
+//		c = serialPort.readString(1).charAt(0);
+//		while (c != '\n') {
+//			sb.append(c);
+//			c = serialPort.readString(1).charAt(0);
+//		}
+//		return Integer.parseInt(sb.toString());
+//		return 0;
+	}
+}

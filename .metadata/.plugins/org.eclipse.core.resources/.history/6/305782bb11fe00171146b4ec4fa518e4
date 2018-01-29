@@ -1,0 +1,22 @@
+package org.usfirst.frc.team6317.robot.subsystems;
+
+import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+public class SensorsSubsystem extends Subsystem {
+	public AnalogInput distanceSensorOne = new AnalogInput(0);
+	
+	@Override
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public double getDistance() {
+		double volts = distanceSensorOne.getVoltage();
+		double millivolts = volts * 1000;
+		double millimeters = millivolts * 0.977;
+		
+		return millimeters;
+	}
+}

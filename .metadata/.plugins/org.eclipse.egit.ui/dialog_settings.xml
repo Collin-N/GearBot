@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
-	<item value="C:\Users\Computer Science\Desktop\Github Repository\Team-6317_Version_1\.git" key="GitSelectRepositoryPage.lastRepository"/>
+	<item value="2" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<item value="C:\Users\Computer Science\Documents\GitHub\TempStorage\.git" key="GitSelectRepositoryPage.lastRepository"/>
 	<section name="GitImportWizard">
 		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
 	</section>

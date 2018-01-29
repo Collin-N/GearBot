@@ -1,13 +1,6 @@
 package org.usfirst.frc.team6317.robot.commands;
 
 import org.usfirst.frc.team6317.robot.Robot;
-import org.usfirst.frc.team6317.robot.sensors.SpatialPhidgetGyroWrapper;
-
-import com.phidgets.PhidgetException;
-import com.phidgets.SpatialPhidget;
-import com.phidgets.event.AttachEvent;
-import com.phidgets.event.AttachListener;
-
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 

@@ -1,0 +1,22 @@
+package org.usfirst.frc.team6317.robot.subsystems;
+
+import org.usfirst.frc.team6317.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+/**
+ *
+ */
+public class ExampleSubsystem extends Subsystem {
+	// Put methods for controlling this subsystem
+	// here. Call these from Commands.
+
+	public void initDefaultCommand() {
+		// Set the default command for a subsystem here.
+		// setDefaultCommand(new MySpecialCommand());
+		RobotMap.leftMotorOne.set(1.0);
+		RobotMap.leftMotorTwo.set(1.0);
+		RobotMap.rightMotorOne.set(1.0);
+		RobotMap.rightMotorTwo.set(1.0);
+	}
+}

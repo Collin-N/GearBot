@@ -4,6 +4,7 @@ import org.usfirst.frc.team6317.robot.Robot;
 import org.usfirst.frc.team6317.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class GyroTurnCommand extends Command {
 	private final int target, threshold;
@@ -27,8 +28,8 @@ public class GyroTurnCommand extends Command {
 
 	@Override
 	protected void execute() {
-		if (Math.abs(target - Robot.gyro.getZHeading()) > threshold) {
-			double s = Robot.gyro.getZHeading() < target ? speed : -speed;
+		if (Math.abs(target - Robot.gyro.getIntegratedZAxis()) > threshold) {
+			double s = Robot.gyro.getIntegratedZAxis() < target ? speed : -speed;
 			if (this.left) {
 				RobotMap.leftDrive1.set(s);
 				RobotMap.leftDrive2.set(s);
@@ -38,6 +39,7 @@ public class GyroTurnCommand extends Command {
 				RobotMap.rightDrive2.set(-s);
 			}
 		} else this.done = true;
+		SmartDashboard.putNumber("Gyro Angle", Robot.gyro.getIntegratedZAxis());
 	}
 	
 	@Override
